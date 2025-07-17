@@ -1,0 +1,1 @@
+size_potion = { name = 'size_potion', label = 'size_potion', weight = 2, type = 'item', image = 'size_potion.png', unique = false, useable = true, shouldClose = true, description = 'size_potion' },
