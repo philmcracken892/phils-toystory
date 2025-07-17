@@ -205,24 +205,7 @@ RSGCore.Functions.CreateUseableItem("size_potion", function(source, item)
     LogScaleChange(source, 'used size potion', nil)
 end)
 
--- Chat command for admins
-RSGCore.Commands.Add('setscale', 'Set player scale (Admin Only)', {
-    {name = 'id', help = 'Player ID'},
-    {name = 'scale', help = 'Scale value'}
-}, false, function(source, args)
-    local targetId = tonumber(args[1])
-    local scale = tonumber(args[2])
-    
-    if not targetId or not scale then
-        TriggerClientEvent('ox_lib:notify', source, {
-            type = 'error',
-            description = 'Usage: /setscale [playerid] [scale]'
-        })
-        return
-    end
-    
-    TriggerEvent('pedscale:adminSetScale', targetId, scale)
-end, 'admin')
+
 
 
 
