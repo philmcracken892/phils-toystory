@@ -23,7 +23,9 @@ server_scripts {
 dependencies {
     'rsg-core',
     'oxmysql',
-    'ox_lib'
+    'ox_lib',
+	'ox_target'
+	
 }
 
 lua54 'yes'
