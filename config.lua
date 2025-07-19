@@ -1,12 +1,19 @@
 Config = {}
 
+-- Scale limits
 Config.MinScale = 0.1
 Config.MaxScale = 7.0
-
 Config.DefaultScale = 1.0
 
+-- System settings
 Config.EnableLogging = true
+Config.EnablePersistence = true
 
+-- Cooldown settings (in seconds)
+Config.PotionCooldown = 5        -- Cooldown for using potion on self
+Config.TargetPotionCooldown = 10 -- Cooldown for using potion on other players
+
+-- Size presets available in the menu
 Config.SizePresets = {
     {
         name = "Tiny",
@@ -46,6 +53,18 @@ Config.SizePresets = {
     }
 }
 
+-- Persistence settings
 Config.PersistenceSettings = {
-    scaleCheckInterval = 5000
+    loadDelay = 2000,      -- Delay before applying scale after player loads
+    spawnDelay = 500,      -- Delay before applying scale after player spawns
+    scaleCheckInterval = 5000  -- Interval for checking and maintaining scales
+}
+
+-- ox-target settings
+Config.TargetSettings = {
+    enabled = true,                    -- Enable ox-target functionality
+    requirePotion = true,              -- Require size potion to target other players
+    showDistance = 2.0,                -- Maximum distance to show target option
+    consumePotionOnUse = true,         -- Whether to consume potion when targeting others
+    allowSelfTarget = false            -- Whether players can target themselves (not recommended)
 }
